@@ -13767,6 +13767,21 @@
           }
         }
       }
+    },
+    "usr_munshhfh": {
+      "profile": {
+        "id": "usr_munshhfh",
+        "name": "Test Student",
+        "email": "test_1790753647206@example.com",
+        "password_hash": "$2a$08$O9o7rBKPtFPHMyOftBdAuehq9GsrcrUJeyKQvjSkchxUBKS.QY0l.",
+        "branch": "Computer Science",
+        "target_role": "Software Engineer",
+        "resume_url": null,
+        "resume_summary": "",
+        "leetcode_username": "",
+        "updated_at": "2026-09-30T07:34:07.274Z"
+      },
+      "subcollections": {}
     }
   }
 }
