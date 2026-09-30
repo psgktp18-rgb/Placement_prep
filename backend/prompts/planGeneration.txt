@@ -1,0 +1,47 @@
+Candidate Profile:
+Branch: {branch}
+Target Role: {target_role}
+5-Dimension Assessment Scores (0-100):
+- Technical Skill: {technical_score}
+- Aptitude: {aptitude_score}
+- Communication: {comm_score}
+- Domain Knowledge: {skills_score}
+- Interview Readiness: {interview_score}
+
+Generate a personalized placement preparation roadmap tailored specifically to candidate's branch ({branch}) and target role ({target_role}), focusing heavily on strengthening their weakest assessment dimensions.
+
+Return ONLY a strict JSON object with no markdown formatting:
+{
+  "learn_topics": [
+    {
+      "id": "learn_1",
+      "title": "...",
+      "category": "...",
+      "description": "...",
+      "estimated_hours": 4,
+      "status": "In Progress"
+    },
+    {
+      "id": "learn_2",
+      "title": "...",
+      "category": "...",
+      "description": "...",
+      "estimated_hours": 6,
+      "status": "Next Up"
+    }
+  ],
+  "practice_topics": [
+    {
+      "id": "practice_1",
+      "title": "...",
+      "type": "coding or case_study",
+      "difficulty": "Easy",
+      "description": "..."
+    }
+  ],
+  "interview_focus": [
+    "Target behavioral questions on project leadership",
+    "Practice system architecture or core domain problem solving"
+  ],
+  "ai_recommendation": "Dynamic purple callout summary advice for student..."
+}

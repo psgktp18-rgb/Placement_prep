@@ -1,0 +1,25 @@
+Evaluate the candidate's answer for the following question:
+Question Title: {question_title}
+Question Description: {question_description}
+Question Type: {question_type} (coding or domain/case)
+Target Role: {target_role}, Branch: {branch}
+
+Candidate's Answer Submission:
+{student_answer}
+
+Read and analyze the submission carefully for:
+1. Technical correctness / domain accuracy
+2. Approach quality, efficiency, structure, and depth
+3. Clarity, edge case awareness, or practical business/engineering feasibility
+
+Assign a score from 0 to 100 and provide constructive feedback.
+
+Return ONLY a strict JSON object with no markdown formatting:
+{
+  "score": 82,
+  "accuracy_score": 85,
+  "clarity_score": 80,
+  "feedback": "Detailed 2-3 sentence evaluation of the answer...",
+  "strengths": ["Clear explanation of logic", "Proper handling of edge cases"],
+  "improvements": ["Optimize time complexity", "Include error checks"]
+}

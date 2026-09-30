@@ -1,0 +1,27 @@
+Given this student's resume text: {resume_text}
+Branch: {branch}, Target role: {target_role}
+
+Generate exactly 2 {question_type} questions (question_type = "coding" for tech branches like Computer Science/IT/Software, "domain/case" for non-tech branches like Commerce, Finance, Mechanical, Civil, MBA, Humanities) that:
+1. Relate directly to technologies, core concepts, frameworks, or domain areas actually mentioned in the resume.
+2. Are scoped appropriately for placement-round difficulty.
+3. Question 1 = easier/warm-up difficulty, Question 2 = moderate placement difficulty.
+
+Return ONLY a strict JSON object with no markdown formatting:
+{
+  "question_1": {
+    "id": "q1",
+    "title": "...",
+    "description": "...",
+    "difficulty": "Easy",
+    "category": "...",
+    "sample_input_or_context": "..."
+  },
+  "question_2": {
+    "id": "q2",
+    "title": "...",
+    "description": "...",
+    "difficulty": "Medium",
+    "category": "...",
+    "sample_input_or_context": "..."
+  }
+}

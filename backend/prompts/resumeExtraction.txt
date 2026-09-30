@@ -1,0 +1,19 @@
+Extracted Raw Text from Candidate's Resume PDF:
+{raw_resume_text}
+
+Candidate Branch: {branch}
+Target Role: {target_role}
+
+Extract the candidate profile information into structured JSON:
+1. summary: A 2-3 sentence professional summary highlighting background, major projects, and domain strengths.
+2. key_skills: Array of top technical or domain skills found in the resume.
+3. highlighted_projects: Array of project names or main achievements.
+4. experience_level: "Fresher", "Internship Experience", or "Experienced".
+
+Return ONLY a strict JSON object with no markdown formatting:
+{
+  "summary": "...",
+  "key_skills": ["..."],
+  "highlighted_projects": ["..."],
+  "experience_level": "..."
+}
