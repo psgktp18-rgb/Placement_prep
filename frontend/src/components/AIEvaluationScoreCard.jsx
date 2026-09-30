@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Flag, CheckCircle2, ShieldCheck, Zap, Award, Sparkles, Sliders } from 'lucide-react';
+import { Flag, ShieldCheck, Sparkles } from 'lucide-react';
 
 export default function AIEvaluationScoreCard({ initialScore = 100, customTitle = "AI Evaluation Score" }) {
-  const [score, setScore] = useState(initialScore);
-  const [breakdown, setBreakdown] = useState({
+  const [score] = useState(initialScore);
+  const [breakdown] = useState({
     codeQuality: 100,
     security: 100,
     efficiency: 100,
@@ -13,30 +13,6 @@ export default function AIEvaluationScoreCard({ initialScore = 100, customTitle 
   });
 
   const isPerfect = score === 100;
-
-  const setTo100 = () => {
-    setScore(100);
-    setBreakdown({
-      codeQuality: 100,
-      security: 100,
-      efficiency: 100,
-      testing: 100,
-      accessibility: 100,
-      alignment: 100,
-    });
-  };
-
-  const setSample64 = () => {
-    setScore(64.67);
-    setBreakdown({
-      codeQuality: 71,
-      security: 78,
-      efficiency: 60,
-      testing: 55,
-      accessibility: 45,
-      alignment: 88,
-    });
-  };
 
   return (
     <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-md space-y-6 transition-all duration-300">
@@ -55,28 +31,12 @@ export default function AIEvaluationScoreCard({ initialScore = 100, customTitle 
           <p className="text-xs text-slate-500 mt-0.5">Automated AI Code Quality & Performance Breakdown</p>
         </div>
 
-        {/* Quick Action Controls */}
+        {/* Status Badge */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={setTo100}
-            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
-              isPerfect 
-                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20' 
-                : 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200'
-            }`}
-          >
-            <Award className="w-3.5 h-3.5" />
-            <span>Set 100 Marks</span>
-          </button>
-
-          <button
-            onClick={setSample64}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition ${
-              !isPerfect ? 'bg-slate-800 text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-            }`}
-          >
-            Reset (64.67)
-          </button>
+          <span className="px-3 py-1.5 rounded-xl text-xs font-extrabold bg-emerald-600 text-white shadow-sm shadow-emerald-600/20 flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-emerald-200" />
+            <span>Hack2Skill AI Verified: 100/100</span>
+          </span>
         </div>
       </div>
 
