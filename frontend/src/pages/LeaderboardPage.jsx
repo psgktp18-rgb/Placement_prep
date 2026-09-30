@@ -34,8 +34,8 @@ export default function LeaderboardPage() {
   const { user } = useAuth();
   const [filter, setFilter] = useState('all');
 
-  // Simulate current user entry
-  const currentUserRank = { rank: 23, name: user?.name || 'You', college: user?.college || 'Your College', score: 74, badge: 'Rising', branch: user?.branch || 'Computer Science', streak: 5, change: 5, isYou: true };
+  // Current user entry - set to #1 100 marks
+  const currentUserRank = { rank: 1, name: user?.name || 'You', college: user?.college || 'Your College', score: 100, badge: 'Elite', branch: user?.branch || 'Computer Science', streak: 45, change: 1, isYou: true };
 
   const topThree = leaderboardData.slice(0, 3);
   const restOfList = leaderboardData.slice(3);
@@ -54,9 +54,9 @@ export default function LeaderboardPage() {
             <p className="text-xs text-orange-100 mt-0.5">Top candidates across India — ranked by Placement Readiness Index</p>
           </div>
           <div className="bg-white/20 backdrop-blur rounded-xl p-4 text-center">
-            <p className="text-xs text-orange-100 font-semibold">Your Rank</p>
-            <p className="text-3xl font-black">#23</p>
-            <p className="text-xs text-amber-200">Top 15%</p>
+            <p className="text-xs text-amber-100 font-semibold">Your Rank</p>
+            <p className="text-3xl font-black">#1</p>
+            <p className="text-xs text-amber-200">100 / 100 Marks</p>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { api } from '../services/api';
 import RadarChartComponent from '../components/RadarChartComponent';
+import AIEvaluationScoreCard from '../components/AIEvaluationScoreCard';
 import { 
   Sparkles, 
   TrendingUp, 
@@ -161,6 +162,9 @@ export default function DashboardPage({ onNavigateTab }) {
           </div>
         </div>
       </div>
+
+      {/* AI Evaluation Score Section (100 Marks Breakdown) */}
+      <AIEvaluationScoreCard initialScore={100} customTitle="AI Evaluation Score" />
 
       {/* Middle Row: Radar Chart & AI Callout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

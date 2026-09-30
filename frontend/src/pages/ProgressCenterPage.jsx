@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { api } from '../services/api';
 import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, Legend, AreaChart, Area } from 'recharts';
 import { LineChart as LineChartIcon, TrendingUp, Calendar, Award, CheckCircle2, Flame, Code, MessageSquare } from 'lucide-react';
+import AIEvaluationScoreCard from '../components/AIEvaluationScoreCard';
 
 const MOCK_SESSIONS = [
   { date: 'Sep 1', activity: 'Initial Assessment', score: 69, type: 'assessment' },
@@ -99,6 +100,9 @@ export default function ProgressCenterPage() {
           );
         })}
       </div>
+
+      {/* AI Evaluation Score Widget (100 Marks Breakdown) */}
+      <AIEvaluationScoreCard initialScore={100} customTitle="AI Evaluation Score & Vectors" />
 
       {/* Area Chart */}
       <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
